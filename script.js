@@ -1,57 +1,56 @@
 
-// /**
-//  * pulls information from the form and build the query URL
-//  * @returns {string} URL for NYT API based on form inputs
-//  */
+
+var language;
+var description = "description="+language;
+
+// function myLanguage() {
+//   language = document.getElementById("CSS").innerHTML;
+   
+//   console.log(language)
+//   // element.classList.add("mystyle");
+// }
+
+// button.addEventListener("click", function(){ 
+//   if()
+//   //button is CSS
+//   language = document.getElementById("CSS").innerHTML; 
+  
+//   if()
+//   //button is HTML
+//   language = document.getElementById("HTML").innerHTML; 
+  
+//   console.log(language)
+
+// });
+
+document.getElementById("CSS").addEventListener("click", function(){
+  language = document.getElementById("CSS").innerHTML; 
+  console.log(language)
+});
+
+document.getElementById("HTML").addEventListener("click", function(){
+  language = document.getElementById("HTML").innerHTML; 
+  console.log(language)
+});
+
+document.getElementById("JavaScript").addEventListener("click", function(){
+  language = document.getElementById("JavaScript").innerHTML; 
+  console.log(language)
+});
 
 
-// var queryUrl = "https://api.indeed.com/ads/apisearch?publisher=123412341234123&q=java+developer&l=austin%2C+tx&sort=&radius=&st=&jt=&start=&limit=&fromage=&filter=&latlong=1&co=us&chnl=&userip=1.2.3.4&useragent=Mozilla/%2F4.0%28Firefox%29&v=2"
+document.getElementById("PYTHON").addEventListener("click", function(){
+  language = document.getElementById("PYTHON").innerHTML; 
+  console.log(language)
+});
 
-// // var queryParams= "";
 
-// $.ajax({
-//   url: queryUrl,
-//   method: "GET"
-// })
-// .then(function (response){
-
-//   // console.log(url)
-//   console.log(response)
-// })
 
 
 $.ajax({
-  url: `https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?description=pyyn&location=new+yk`,
+  url: "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?" +language+"&location=new+york",
   method: "GET",
 }).then(function (response) {
   console.log(response);
 })
 
-
-/* //language description
-queryParams.q = $("#search")
-.val()
-.trim();
-
-//location
-// If the user provides a location, include it in the queryParams object
- var location = $("#location")
- .val()
- .trim();
-
-if (parseInt(location)) {
- queryParams.location = location;
-}
-//fulltime
-
-// Logging the URL so we have access to it for troubleshooting
-
-console.log("URL: " + queryURL);
-console.log(queryURL + $.param(queryParams));
-  return queryURL + $.param(queryParams);
-
-
-
-
-
- */
