@@ -25,14 +25,14 @@
 
 <body>
 
-  <!-- Main Search -->
+  
   <div class="container">
 
-    <!-- Jumbotron for Title -->
+    <!-- jumbotron-->
     <div class="jumbotron" style="background-color: #2ab660 ; color: white;">
       <h1 class="text-center">
         <strong>
-          <i class="fa fa-newspaper-o"></i> Job Finder</strong>
+          <i class="large material-icons">pages</i>   JOB FINDER</strong>
       </h1>
     </div>
 
@@ -40,7 +40,6 @@
     <div class="row">
       <div class="col-sm-12">
         <br>
-        <!-- First card is for handling the search parameters -->
         <div class="card">
           <div class="card-header">
             <strong>
@@ -48,10 +47,8 @@
           </div>
           <div class="card-body">
 
-            <!-- Here we create an HTML Form for handling the inputs-->
-            <form role="form">
-            
-              <!-- Here we create the text box for capturing the search term-->
+                      
+              <!-- buttons of languages preffered-->
               <div >
                <button>Javascript</button><br><button>HTML</button>
                 <br>
@@ -61,7 +58,7 @@
               
 
 
-              <!-- Here we capture the number of records that the user wants to retrieve  -->
+              <!-- number of jobs to retreive-->
               <div class="form-group">
                 <label for="pwd">Number of Job Listings to Retrieve:</label>
                 <select id="Jobs-count" class="custom-select" aria-labelledby="dropdownMenuButton">
@@ -77,13 +74,9 @@
                 <input type="text" name="location" id="location_field" value="" placeholder="Filter by city, state, zip code or country" autocomplete="off">
               </div>
 
-              <!-- Here we capture the End Year Parameter -->
-<!--               <div class="form-group">
-                <label for="end-year">End Year (Optional):</label>
-                <input type="text" class="form-control" id="end-year">
-              </div> -->
+              
 
-              <!-- Here we have our final submit button -->
+              <!--submit button -->
               <button type="submit" class="btn btn-default" id="run-search">
                 <i class="fa fa-search"></i> Search</button>
               <button class="btn btn-default" id="clear-all">
@@ -95,37 +88,35 @@
       </div>
     </div>
 
-    <!-- This row will handle all of the retrieved articles -->
+    <!-- This row will handle all of the retrieved jobs found -->
     <div class="row">
       <div class="col-sm-12">
         <br>
 
-        <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+       
         <div class="card">
 
-          <!-- card Heading for the retrieved articles box -->
+          
           <div class="card-header">
             <strong>
               <i class="fa fa-table"></i> Top jobs</strong>
           </div>
 
-          <!-- This main card will hold each of the resulting articles -->
+          
           <div class="card-body" id="article-section">
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Footer Region -->
+    <!-- Footer  -->
     <div class="row">
       <div class="col-sm-12">
 
-        <!-- Line Break followed by closing -->
+        
         <hr>
         <h5 class="text-center">
-          <small>bottom comment????
-            <i class="fa fa-heart"></i>
-          </small>
+          <small>Job Finder</small>
         </h5>
 
       </div>
