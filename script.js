@@ -55,10 +55,53 @@ $.ajax({
   method: "GET",
 }).then(function (response) {
   // console.log(url + description+"&location=new+york");
-  console.log(response);
+  var Listing = response[0];
+  var Jobtitle = Listing.title;
+  
+  console.log(Listing);
+  console.log(Jobtitle);
+
+  
   console.log(queryUrl);
+
 })
 
 }
 
+// // @param {object} NYTData
+
+// function updatePage(Data) {
+//   // Get from the form the number of results to display
+//   // API doesn't have a "limit" parameter, so we have to do this ourselves
+//   var numJobs = $("#Jobs-count").val();
+  
+
+//   for (var i = 0; i < numJobs; i++) {
+//     // Get specific article info for current index
+//     var Listing = response[i];
+//     var ListingCount = i + 1;
+
+//     // Create the  list group to contain the articles and add the article content for each
+//     var $jobList = $("<ul>");
+//     $jobList.addClass("list-group");
+
+//      // Add the newly created element to the DOM
+//      $("#job-section").append($jobList);
+
+//      var Jobtitle = Listing.title;
+//       var $ListItem = $("<li class='list-group-item title'>");
+//       $articleListItem.append(
+//         "<span class='label label-primary'>" +
+//           jobCount +
+//           "</span>" +
+//           "<strong> " +
+//           Jobtitle +
+//           "</strong>"
+//       );
+
+
+//      // Append the article
+//      $jobList.append($ListItem);
+// }
+// }
 
