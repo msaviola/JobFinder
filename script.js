@@ -1,56 +1,64 @@
 
 
-var language;
+var language="";
+// var location="";
+var url= "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?";
+// var URL ="https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?";
 var description = "description="+language;
 
-// function myLanguage() {
-//   language = document.getElementById("CSS").innerHTML;
-   
-//   console.log(language)
-//   // element.classList.add("mystyle");
-// }
 
-// button.addEventListener("click", function(){ 
-//   if()
-//   //button is CSS
-//   language = document.getElementById("CSS").innerHTML; 
-  
-//   if()
-//   //button is HTML
-//   language = document.getElementById("HTML").innerHTML; 
-  
-//   console.log(language)
-
-// });
 
 document.getElementById("CSS").addEventListener("click", function(){
   language = document.getElementById("CSS").innerHTML; 
+  description = "description="+language;
   console.log(language)
+  console.log(description)
+
+  updateURL();
 });
 
 document.getElementById("HTML").addEventListener("click", function(){
   language = document.getElementById("HTML").innerHTML; 
+  description = "description="+language;
   console.log(language)
+  console.log(description)
+
+  updateURL();
 });
 
 document.getElementById("JavaScript").addEventListener("click", function(){
   language = document.getElementById("JavaScript").innerHTML; 
+  description = "description="+language;
   console.log(language)
+  console.log(description)
+
+  updateURL();
 });
 
 
 document.getElementById("PYTHON").addEventListener("click", function(){
   language = document.getElementById("PYTHON").innerHTML; 
+  description = "description="+language;
   console.log(language)
+  console.log(description)
+
+  updateURL();
 });
 
 
+function updateURL(){
 
+  var queryUrl=url + description;
 
 $.ajax({
-  url: "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?" +language+"&location=new+york",
+  url: queryUrl,
   method: "GET",
 }).then(function (response) {
+  // console.log(url + description+"&location=new+york");
   console.log(response);
+  console.log(queryUrl);
 })
+
+}
+
 
