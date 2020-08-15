@@ -9,7 +9,7 @@
 
   <!-- icons link for materialize -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
+
 
   <!-- Style to fix the issue of text extending past card length -->
   <style>
@@ -59,14 +59,33 @@
 
 
             <!-- number of jobs to retreive-->
+
+
             <div class="form-group">
-              <label for="pwd">Number of Job Listings to Retrieve:</label>
-              <select id="Jobs-count" class="custom-select" aria-labelledby="dropdownMenuButton">
-                <option selected value="1">1</option>
+
+              <strong>
+                <i class="fa fa-list-alt"></i> Select Number of Job Listings to Retrieve</strong>
+                 
+                    <!-- buttons of languages preffered-->
+            <div>
+              <button id="one">1</button><br>
+              <button id="five">5</button><br>
+              <button id="ten">10</button><br>
+            
+            </div>
+
+
+                <!-- <select id="Jobs-count" class="custom-select" > -->
+
+
+
+
+
+                <!-- <option selected value="1">1</option> -->
                 <!-- Setting the option for 5 as default -->
-                <option value="5" selected>5</option>
-                <option value="10">10</option>
-              </select>
+                <!-- <option value="5" selected>5</option> -->
+                <!-- <option value="10">10</option> -->
+                <!-- </select> -->
             </div>
 
             <!--zip code parameter -->
@@ -79,7 +98,7 @@
 
             <!--submit button -->
             <button type="submit" id="run-search"> Search</button>
-            <button  id="clear-all">Clear Results</button>
+            <button id="clear-all">Clear Results</button>
 
             </form>
           </div>
