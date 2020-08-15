@@ -6,7 +6,9 @@ var url = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions
 // var URL ="https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?";
 var description = "description=" + language;
 
+var numberofJobs = 5; //default value
 
+//select language
 
 document.getElementById("CSS").addEventListener("click", function () {
   language = document.getElementById("CSS").innerHTML;
@@ -45,37 +47,41 @@ document.getElementById("PYTHON").addEventListener("click", function () {
   updateURL();
 });
 
+//select number of listings
+
+document.getElementById("one").addEventListener("click", function () {
+  numberofJobs=1;
+  console.log(numberofJobs);
+});
+
+document.getElementById("five").addEventListener("click", function () {
+  numberofJobs=5;
+  console.log(numberofJobs);
+});
+
+document.getElementById("ten").addEventListener("click", function () {
+  numberofJobs=10;
+  console.log(numberofJobs);
+});
+
+
 
 function updateURL() {
 
   queryUrl = url + description;
 
 }
-// console.log(url + description+"&location=new+york");
-// var Listing = response[0];
-// var Jobtitle = Listing.title;
-
-// console.log(Listing);
-// console.log(Jobtitle);
-
-
-// console.log(queryUrl);
-
-
-
-
-
-
 
 
 function updatePage(response) {
   // Get from the form the number of results to display
   // API doesn't have a "limit" parameter, so we have to do this ourselves
-  var numJobs = $("#Jobs-count").val();
+
   console.log("updatePage function");
+  
 
 
-  for (var i = 0; i < numJobs; i++) {
+  for (var i = 0; i < numberofJobs; i++) {
     // Get specific article info for current index
     var Listing = response[i];
     var ListingCount = i + 1;
@@ -89,8 +95,8 @@ function updatePage(response) {
 
     var Jobtitle = Listing.title;
     var $ListItem = $("<li class='list-group-item title'>");
-    
-    
+
+
     $ListItem.append(
       "<span class='label label-primary'>" +
       ListingCount +
@@ -104,11 +110,11 @@ function updatePage(response) {
     $ListItem.append("<h5>" + Listing.company + "</h5>");
     // Append and log url
     $ListItem.append("<a href='" + Listing.url + "'>" + Listing.url + "</a>");
-    
+
 
     // Append the article
     $jobList.append($ListItem);
-    
+
   }
   $(".progress").hide();
 }
@@ -118,44 +124,50 @@ function clear() {
   console.log("clear button clicked");
 }
 
-$(document).ready(function () {
-
-  
-    // // Empty the region associated with the articles
-    // clear();
-
-    // // Build the query URL for the ajax request to the NYT API
-    // var queryURL = updateURL();
-
-    // // Make the AJAX request to the API - GETs the JSON data at the queryURL.
-    // // The data then gets passed as an argument to the updatePage function
-    // $.ajax({
-    //   url: queryUrl,
-    //   method: "GET",
-    // }).then(updatePage);
 
 
+
+<<<<<<< HEAD
     $(".progress").hide();
     $("#run-search").click(function (event) {
       $(".progress").show();
+=======
 
-      // This line allows us to take advantage of the HTML "submit" property
-      // This way we can hit enter on the keyboard and it registers the search
-      // (in addition to clicks). Prevents the page from reloading on form submit.
-      event.preventDefault();
-      console.log("search button clicked");
+$(document).ready(function () {
+  
+ 
+  $("#run-search").click(function (event) {
 
-      clear();
+>>>>>>> 0fd8a1b5a1c8c7df192db03520586f50197c934c
 
-      var queryURL = updateURL();
-       $.ajax({
+    // This line allows us to take advantage of the HTML "submit" property
+    // This way we can hit enter on the keyboard and it registers the search
+    // (in addition to clicks). Prevents the page from reloading on form submit.
+    event.preventDefault();
+    console.log("search button clicked");
+
+    clear();
+
+    var queryURL = updateURL();
+    $.ajax({
       url: queryUrl,
       method: "GET",
     }).then(updatePage);
+<<<<<<< HEAD
     
     });
     
     //  .on("click") function associated with the clear button
     $("#clear-all").on("click", clear);
+=======
 
   });
+
+  //  .on("click") function associated with the clear button
+  $("#clear-all").on("click", clear);
+
+});
+
+
+>>>>>>> 0fd8a1b5a1c8c7df192db03520586f50197c934c
+
