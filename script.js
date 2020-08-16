@@ -127,18 +127,12 @@ function clear() {
 
 
 
-<<<<<<< HEAD
-    $(".progress").hide();
-    $("#run-search").click(function (event) {
-      $(".progress").show();
-=======
 
 $(document).ready(function () {
   
- 
+  $(".progress").hide();
   $("#run-search").click(function (event) {
-
->>>>>>> 0fd8a1b5a1c8c7df192db03520586f50197c934c
+    $(".progress").show();
 
     // This line allows us to take advantage of the HTML "submit" property
     // This way we can hit enter on the keyboard and it registers the search
@@ -153,21 +147,8 @@ $(document).ready(function () {
       url: queryUrl,
       method: "GET",
     }).then(updatePage);
-<<<<<<< HEAD
-    
-    });
-    
-    //  .on("click") function associated with the clear button
-    $("#clear-all").on("click", clear);
-=======
 
   });
 
   //  .on("click") function associated with the clear button
-  $("#clear-all").on("click", clear);
-
-});
-
-
->>>>>>> 0fd8a1b5a1c8c7df192db03520586f50197c934c
-
+  $("#clear-all").on("click", clear)});
