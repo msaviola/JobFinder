@@ -1,3 +1,25 @@
+.jumbotron {
+    font-family: "Orbitron";
+}
+
 body {
     background-image:url("https://images.pexels.com/photos/2501965/pexels-photo-2501965.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+}
+
+.btn {
+    background-color: grey;
+}
+
+.text {
+    font-family: 'Bangers', serif;
+    font-size: 20px;
+}
+
+#run-search {
+    background-color: green;
+
+}
+
+#clear-all {
+    background-color: rgba(163, 27, 27, 0.979);
 }

@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="./style.css">
   <!-- icons link for materialize -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- font link for google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
 
 
   <!-- Style to fix the issue of text extending past card length -->
@@ -30,7 +33,7 @@
 
     <!-- jumbotron-->
     <div class="jumbotron teal accent-1">
-      <h1 class="text-center">
+      <h1 class="center-align">
         <strong>
           <i class="large material-icons">pages</i> JOB FINDER</strong>
       </h1>
@@ -41,19 +44,22 @@
       <div class="col-sm-12">
         <br>
         <div class="card grey lighten-4">
-          <div class="card-header">
-            <strong>
-              <i class="fa fa-list-alt"></i> Select preferred language</strong>
+          <div class="card-header text">
+            <strong>Select preferred language</strong>
           </div>
           <div class="card-body">
 
 
             <!-- buttons of languages preffered-->
             <div>
-              <button id="JavaScript">Javascript</button><br><button id="HTML">HTML</button>
-              <br>
-              <button id="CSS">CSS</button><br><button id="PYTHON">PYTHON</button>
-
+              <button class="waves-effect waves-light btn" id="JavaScript">Javascript<br>
+                <button class="waves-effect waves-light btn" id="HTML">HTML<br>
+                  <button class="waves-effect waves-light btn" id="CSS">CSS<br>
+                    <button class="waves-effect waves-light btn" id="PYTHON">PYTHON
+                    </button>
+                  </button>
+                </button>
+            </button>
             </div>
 
 
@@ -61,17 +67,18 @@
             <!-- number of jobs to retreive-->
 
 
-            <div class="form-group">
+            <div class="form-group  text">
 
-              <strong>
-                <i class="fa fa-list-alt"></i> Select Number of Job Listings to Retrieve</strong>
+              <strong>Select Number of Job Listings to Retrieve</strong>
                  
                     <!-- buttons of languages preffered-->
             <div>
-              <button id="one">1</button><br>
-              <button id="five">5</button><br>
-              <button id="ten">10</button><br>
-            
+              <button class="waves-effect waves-light btn" id="one">1<br>
+                <button class="waves-effect waves-light btn" id="five">5<br>
+                  <button class="waves-effect waves-light btn" id="ten">10<br>
+                  </button>
+                </button>
+              </button>
             </div>
 
 
@@ -97,8 +104,8 @@
 
 
             <!--submit button -->
-            <button type="submit" id="run-search"> Search</button>
-            <button  id="clear-all">Clear Results</button>
+            <button type="submit" class="waves-effect waves-light btn" id="run-search"> Search</button>
+            <button  id="clear-all" class="waves-effect waves-light btn">Clear Results</button>
             <div class="progress">
               <div class="indeterminate"></div>
           </div>
