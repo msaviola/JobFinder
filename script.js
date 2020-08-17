@@ -116,6 +116,7 @@ function updatePage(response) {
     $jobList.append($ListItem);
 
   }
+  $(".progress").hide();
 }
 
 function clear() {
@@ -129,9 +130,9 @@ function clear() {
 
 $(document).ready(function () {
   
- 
+  $(".progress").hide();
   $("#run-search").click(function (event) {
-
+    $(".progress").show();
 
     // This line allows us to take advantage of the HTML "submit" property
     // This way we can hit enter on the keyboard and it registers the search
@@ -150,9 +151,4 @@ $(document).ready(function () {
   });
 
   //  .on("click") function associated with the clear button
-  $("#clear-all").on("click", clear);
-
-});
-
-
-
+  $("#clear-all").on("click", clear)});
