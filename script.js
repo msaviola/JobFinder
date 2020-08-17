@@ -11,7 +11,7 @@ var numberofJobs = 5; //default value
 //select language
 
 document.getElementById("CSS").addEventListener("click", function () {
-  language = document.getElementById("CSS").innerHTML;
+  language = "CSS";
   description = "description=" + language;
   console.log(language)
   console.log(description)
@@ -20,7 +20,7 @@ document.getElementById("CSS").addEventListener("click", function () {
 });
 
 document.getElementById("HTML").addEventListener("click", function () {
-  language = document.getElementById("HTML").innerHTML;
+  language = "HTML";
   description = "description=" + language;
   console.log(language)
   console.log(description)
@@ -29,7 +29,7 @@ document.getElementById("HTML").addEventListener("click", function () {
 });
 
 document.getElementById("JavaScript").addEventListener("click", function () {
-  language = document.getElementById("JavaScript").innerHTML;
+  language = "JavaScript";
   description = "description=" + language;
   console.log(language)
   console.log(description)
@@ -39,7 +39,7 @@ document.getElementById("JavaScript").addEventListener("click", function () {
 
 
 document.getElementById("PYTHON").addEventListener("click", function () {
-  language = document.getElementById("PYTHON").innerHTML;
+  language = "PYTHON";
   description = "description=" + language;
   console.log(language)
   console.log(description)
@@ -78,6 +78,8 @@ function updatePage(response) {
   // API doesn't have a "limit" parameter, so we have to do this ourselves
 
   console.log("updatePage function");
+  console.log(queryUrl);
+  console.log(response);
   
 
 
@@ -116,6 +118,7 @@ function updatePage(response) {
     $jobList.append($ListItem);
 
   }
+  $(".progress").hide();
 }
 
 function clear() {
@@ -128,14 +131,12 @@ function clear() {
 
 
 $(document).ready(function () {
-  
+
+  $(".progress").hide();
  
   $("#run-search").click(function (event) {
 
-
-    // This line allows us to take advantage of the HTML "submit" property
-    // This way we can hit enter on the keyboard and it registers the search
-    // (in addition to clicks). Prevents the page from reloading on form submit.
+    $(".progress").show();
     event.preventDefault();
     console.log("search button clicked");
 
