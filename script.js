@@ -50,17 +50,17 @@ document.getElementById("PYTHON").addEventListener("click", function () {
 //select number of listings
 
 document.getElementById("one").addEventListener("click", function () {
-  numberofJobs=1;
+  numberofJobs = 1;
   console.log(numberofJobs);
 });
 
 document.getElementById("five").addEventListener("click", function () {
-  numberofJobs=5;
+  numberofJobs = 5;
   console.log(numberofJobs);
 });
 
 document.getElementById("ten").addEventListener("click", function () {
-  numberofJobs=10;
+  numberofJobs = 10;
   console.log(numberofJobs);
 });
 
@@ -80,7 +80,7 @@ function updatePage(response) {
   console.log("updatePage function");
   console.log(queryUrl);
   console.log(response);
-  
+
 
 
   for (var i = 0; i < numberofJobs; i++) {
@@ -131,23 +131,12 @@ function clear() {
 
 
 $(document).ready(function () {
-<<<<<<< HEAD
 
   $(".progress").hide();
- 
+
   $("#run-search").click(function (event) {
 
     $(".progress").show();
-=======
-  
-  $(".progress").hide();
-  $("#run-search").click(function (event) {
-    $(".progress").show();
-
-    // This line allows us to take advantage of the HTML "submit" property
-    // This way we can hit enter on the keyboard and it registers the search
-    // (in addition to clicks). Prevents the page from reloading on form submit.
->>>>>>> 346fb19aa7cb6a92bfcc22021f0d11fa0b54db7b
     event.preventDefault();
     console.log("search button clicked");
 
@@ -159,7 +148,10 @@ $(document).ready(function () {
       method: "GET",
     }).then(updatePage);
 
+
+
   });
 
   //  .on("click") function associated with the clear button
-  $("#clear-all").on("click", clear)});
+  $("#clear-all").on("click", clear)
+});
