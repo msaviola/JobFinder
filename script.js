@@ -1,11 +1,10 @@
 
-
 var language = "";
-// var location="";
+ //var location=""; //<<<<<<-----------------this breaks the page for some reason
 var url = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?";
 // var URL ="https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?";
 var description = "description=" + language;
-
+//var area = "location=" + location;
 var numberofJobs = 5; //default value
 
 //select language
@@ -64,13 +63,19 @@ document.getElementById("ten").addEventListener("click", function () {
   console.log(numberofJobs);
 });
 
-
+//attempting to make function to take inner text of location_field and insert it into search parameters
+//  function zone() {
+//   location= document.getElementById("location_field").val;
+//   var area = "location=" + location;
+//   updateURL();
+//  } 
 
 function updateURL() {
-
-  queryUrl = url + description;
-
+  
+  queryUrl = url + description; //+ area;
 }
+
+
 
 
 function updatePage(response) {
@@ -116,6 +121,7 @@ function updatePage(response) {
     $jobList.append($ListItem);
 
   }
+  //hide preloader bar when search is complete
   $(".progress").hide();
 }
 
@@ -129,9 +135,10 @@ function clear() {
 
 
 $(document).ready(function () {
-  
+  //hide preloader bar
   $(".progress").hide();
   $("#run-search").click(function (event) {
+    //show preloader bar when search is clicked
     $(".progress").show();
 
     // This line allows us to take advantage of the HTML "submit" property
