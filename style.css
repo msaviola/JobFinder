@@ -22,4 +22,18 @@ body {
 
 #clear-all {
     background-color: rgba(163, 27, 27, 0.979);
+
+}
+
+#job-section {
+    background-color: rgb(254, 255, 240);
+    
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 20px;
 }

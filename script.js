@@ -1,6 +1,6 @@
 
 var language = "";
- //var location=""; //<<<<<<-----------------this breaks the page for some reason
+//var location=""; //<<<<<<-----------------this breaks the page for some reason 
 var url = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?";
 // var URL ="https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?";
 var description = "description=" + language;
@@ -106,7 +106,7 @@ function updatePage(response) {
 
     $ListItem.append(
       "<span class='label label-primary'>" +
-      ListingCount +
+      // ListingCount +
       "</span>" +
       "<h4> " +
       Jobtitle +
